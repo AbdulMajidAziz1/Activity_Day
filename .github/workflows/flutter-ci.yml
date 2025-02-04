@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4  # ✅ LATEST VERSION
+        uses: actions/checkout@v4
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -28,7 +28,7 @@ jobs:
         run: flutter build apk --release
 
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v4  # ✅ FIXED (Updated to v4)
+        uses: actions/upload-artifact@v4
         with:
           name: flutter-apk
           path: build/app/outputs/flutter-apk/app-release.apk
